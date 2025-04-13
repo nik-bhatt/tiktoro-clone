@@ -1,0 +1,888 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tikitoro Testimonials
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    }
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
+        .icon-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .icon-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .header {
+            background-color: #8b5e34;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #a0522d;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .swiper-container {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: calc(25% - 20px);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .video-wrapper video {
+            width: 100%;
+            height: 300px; /* Increased height */
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(160, 82, 45, 0.9);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            animation: fadeInUp 1s;
+        }
+        .overlay p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .overlay span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .video-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @media (max-width: 768px) {
+            .video-wrapper {
+                width: calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .video-wrapper {
+                width: 100%;
+            }
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+      
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #000;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+    <div class="navbar">
+        <div class="logo">
+         tikitoro
+        </div>
+        <div class="menu">
+         <a href="shop.html">
+          Shop
+         </a>
+         <a href="gift.html">
+          Gifting
+         </a>
+         <a href="review.html">
+          Reviews
+         </a>
+         <a href="shop.html">
+          Our Story
+         </a>
+         <a href="incre.html">
+          Ingredients
+         </a>
+         <a href="tiktoro.html">
+          Tikitribe
+         </a>
+         <a href="sub.html">
+          Subscription
+         </a>
+         <a href="reward.html">
+          Rewards
+         </a>
+         <a href="blog.html">
+          Blog
+         </a>
+         <a href="FQ.html">
+          FAQs
+         </a>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-heart">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-shopping-bag">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-user">
+         </i>
+        </div>
+    </div>
+  <div class="container">
+   <h1>
+    Tikitoro Testimonials
+   </h1>
+   <h2>
+    What our customers say about us
+   </h2>
+   <div class="swiper-container">
+    <div class="swiper-wrapper">
+     <!-- Slide 1 -->
+     <div class="swiper-slide">
+      <div class="video-container">
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Why Is This
+         </p>
+         <span>
+          Teen Crazy About Tikitoro?
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Why Do Moms
+         </p>
+         <span>
+          Trust Tikitoro?
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          I'm Rishi &amp;
+         </p>
+         <span>
+          I have been using
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          We really liked
+         </p>
+         <span>
+          Tikitoro products,
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Slide 2 -->
+     <div class="swiper-slide">
+      <div class="video-container">
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 5
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 6
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 7
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 8
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Slide 3 -->
+     <div class="swiper-slide">
+      <div class="video-container">
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 9
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 10
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 11
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+       <div class="video-wrapper">
+        <video controls onended="swiper.slideNext()">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+         Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+         <p>
+          Customer 12
+         </p>
+         <span>
+          Testimonial
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination">
+    </div>
+   </div>
+  </div>
+  <div class="container">
+    <h1>
+     Tikitoro Testimonials
+    </h1>
+    <h2>
+     What our customers say about us
+    </h2>
+    <div class="swiper-container">
+     <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+       <div class="video-container">
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Why Is This
+          </p>
+          <span>
+           Teen Crazy About Tikitoro?
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Why Do Moms
+          </p>
+          <span>
+           Trust Tikitoro?
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           I'm Rishi &amp;
+          </p>
+          <span>
+           I have been using
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           We really liked
+          </p>
+          <span>
+           Tikitoro products,
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+       <div class="video-container">
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 5
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 6
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 7
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 8
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+       <div class="video-container">
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 9
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 10
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 11
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+        <div class="video-wrapper">
+         <video controls onended="swiper.slideNext()">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+         </video>
+         <div class="overlay">
+          <p>
+           Customer 12
+          </p>
+          <span>
+           Testimonial
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Add Pagination -->
+     <div class="swiper-pagination">
+     </div>
+    </div>
+   </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+  </script>
+  <script>
+   var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+  </script>
+  <div class="stay-in-touch">
+    <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+    <div class="overlay">
+     <p>
+      Stay up-to-date on Tikitoro products, promotions and blogs.
+     </p>
+     <input placeholder="email@address.com" type="email"/>
+     <button>
+      <i class="fas fa-arrow-right">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="footer">
+    <div class="footer-links">
+     <div>
+      <h3>
+       Shop All
+      </h3>
+      <a href="#">
+       Face
+      </a>
+      <a href="#">
+       Body
+      </a>
+      <a href="#">
+       Hair
+      </a>
+      <a href="#">
+       Merch
+      </a>
+     </div>
+     <div>
+      <h3>
+       Our Story
+      </h3>
+      <a href="#">
+       Blog
+      </a>
+      <a href="#">
+       Contact
+      </a>
+      <a href="#">
+       FAQs
+      </a>
+     </div>
+     <div>
+      <h3>
+       Privacy Policy
+      </h3>
+      <a href="#">
+       Terms of Use
+      </a>
+      <a href="#">
+       Shipping Policy
+      </a>
+      <a href="#">
+       Returns, Refund &amp; Cancellation
+      </a>
+      <a href="#">
+       Track Your Order
+      </a>
+     </div>
+    </div>
+    <div class="social-icons">
+     <a href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+ </body>
+</html>

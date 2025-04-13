@@ -1,0 +1,1359 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tikitoro
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #4a4a4a;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5ed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            
+        }
+        .description {
+            -webkit-tap-highlight-color: transparent;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --color--black: #333333;
+    --color--white: #ffffff;
+    --recurpay_brand_color: "#000000";
+    --recurpay_button_text_color: "#ffffff";
+    --recurpay_button_bg_color: "#000000";
+    --corner-satc-card-bg: rgb(226,193,158);
+    --corner-satc-card-bg-mobile: rgb(255,255,255);
+    --corner-satc-card-fg: rgb(30,30,30);
+    --corner-satc-card-fg-mobile: rgb(30,30,30);
+    --corner-satc-cta-bg: rgb(109,60,24);
+    --corner-satc-cta-bg-mobile: rgb(109,60,24);
+    --corner-satc-cta-fg: rgb(255,255,255);
+    --corner-satc-cta-fg-mobile: rgb(255,255,255);
+    --corner-satc-z_index: 5000;
+    --corner-satc-z_index-mobile: 1231;
+    --corner-satc-image-outline: rgb(72,123,246);
+    --corner-satc-image-outline-mobile: rgb(72,123,246);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-size: 1.6rem;
+    font-family: Mulish,sans-serif;
+    color: #58585a;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    visibility: visible;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center!important;
+    padding: 80;
+        }
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
+        .icon-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .icon-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .header {
+            background-color: #8b5e34;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .slidess {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+        }
+        .slide img {
+            width: 33.33%;
+            height: auto;
+        }
+        .slide .text-content {
+            width: 33.33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .slide .text-content h2 {
+            color: #8b5e34;
+            font-size: 24px;
+            margin: 10px 0;
+            animation: bounceIn 1s ease-in-out forwards;
+        }
+        .slide .text-content p {
+            color: #333;
+            font-size: 16px;
+            margin: 10px 0;
+            animation: bounceIn 1s ease-in-out forwards;
+        }
+        .slide .text-content .shop-button {
+            background-color: #8b5e34;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            animation: bounceIn 1s ease-in-out forwards;
+        }
+        .slide .text-content .age-badge {
+            background-color: #d4a373;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: bounceIn 1s ease-in-out forwards;
+        }
+        .dotes {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 60px;
+        }
+        .dotes span {
+            width: 10px;
+            height: 10px;
+            background-color: #d4a373;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .arrow-left, .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #8b5e34;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        @media (max-width: 768px) {
+            .slide img, .slide .text-content {
+                width: 100%;
+            }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 556px;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+        .product-item img {
+            width: 100%;
+            height: 321px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-item:hover img {
+            transform: scale(1.1);
+        }
+        .product-item h2, .product-item p, .product-item .arrow {
+            transition: none;
+        }
+        .product-item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 1.2em;
+            color: #d2691e;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-item .arrow {
+            display: inline-block;
+            background-color: #4b2e1e;
+            color: #fff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-left: 10px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-item-content {
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .container {
+            text-align: center;
+            background-color: #fdfaf4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .category {
+            position: relative;
+            width: 339px;
+            height: 333px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .category:hover {
+            transform: scale(1.05);
+        }
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .category .label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .category .arrow {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #8b5e34;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        @media (max-width: 768px) {
+            .categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            .category {
+                margin-bottom: 20px;
+            }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .product-card img.hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .product-card:hover img.default-img {
+            opacity: 0;
+        }
+        .product-card:hover img.hover-img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .product-info {
+            margin-top: 10px;
+        }
+        .product-info h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .product-info p {
+            font-size: 1em;
+            color: #666;
+        }
+        .product-info .price {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+        }
+        .add-to-cart {
+            background-color: #5a3d2b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #2a9d8f;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .badge.kids {
+            background-color: #e76f51;
+        }
+        .product-card .fa-heart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .product-card .fa-heart:hover {
+            color: #e76f51;
+        }
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .nine-slider-container {
+            position: relative;
+            width: 90%; /* Increased width to 90% of the screen */
+            height: 50%;
+            max-width: 2000px; /* Increased maximum width */
+            margin: 50px auto; /* Centering the slider */
+            overflow: hidden;
+            height: 100vh;
+           
+        }
+
+        .nine-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100vh;
+        }
+
+        .nine-slide {
+            min-width: 100%;
+            height: 100vh;
+            background-color: #17e283;
+            text-align: center;
+            padding: 100px 0;
+            font-size: 2rem;
+            color: white;
+            border: 1px solid #ddd;
+        }
+
+        /* Dot Navigation */
+        .nine-nav-dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        .nine-dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .nine-dot.active {
+            background-color: #f5a623; /* Active dot color */
+        }
+
+        /* Navigation Buttons */
+        .nine-prev, .nine-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 1.8rem;
+            padding: 12px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .nine-prev {
+            left: 10px;
+        }
+
+        .nine-next {
+            right: 10px;
+        }
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <marquee>
+    Introducing Teen Anti-Acne Facewash &amp; Anti-Acne Gel Moisturizer!
+   </marquee>
+  </div>
+  <div class="navbar">
+    <div class="logo">
+     tikitoro
+    </div>
+    <div class="menu">
+     <a href="shop.html">
+      Shop
+     </a>
+     <a href="gift.html">
+      Gifting
+     </a>
+     <a href="review.html">
+      Reviews
+     </a>
+     <a href="story.html">
+      Our Story
+     </a>
+     <a href="incre.html">
+      Ingredients
+     </a>
+     <a href="tiktoro.html">
+      Tikitribe
+     </a>
+     <a href="sub.html">
+      Subscription
+     </a>
+     <a href="review.html">
+      Rewards
+     </a>
+     <a href="blog.html">
+      Blog
+     </a>
+     <a href="FQ.html">
+      FAQs
+     </a>
+    </div>
+    <div class="icons">
+     <i class="fas fa-search">
+     </i>
+     <i class="fas fa-heart">
+      <span class="badge">
+       0
+      </span>
+     </i>
+     <i class="fas fa-shopping-bag">
+      <span class="badge">
+       0
+      </span>
+     </i>
+     <i class="fas fa-user">
+     </i>
+    </div>
+</div>
+  <div class="slider">
+   <div class="slidess">
+    <div class="slide">
+     <img alt="Image 1" height="400" src="https://storage.googleapis.com/a1aa/image/AgPWehXCw31PFqRFclF6PFxx2Tux4frGIqecKlq4Je7CCfLfE.jpg" width="400"/>
+     <div class="text-content">
+      <div class="age-badge">
+       Ages 11-16
+      </div>
+      <h2>
+       Head to Toe Cleansing
+      </h2>
+      <p>
+       Discover our clean specially formulated products
+      </p>
+      <button class="shop-button">
+       Shop Tikitoro
+      </button>
+      <div class="dotes">
+        <span data-slide="0">
+        </span>
+        <span data-slide="1">
+        </span>
+        <span data-slide="2">
+        </span>
+       </div>
+     </div>
+     <img alt="Image 2" height="400" src="https://storage.googleapis.com/a1aa/image/z8iPoFm3VU6GAhL41y1fel4f4xfAgLbJVFBMxfkcbkyjDeXeJA.jpg" width="400"/>
+    </div>
+    <div class="slide">
+     <img alt="Image 3" height="400" src="https://storage.googleapis.com/a1aa/image/49TEsqJkkqqaERvPnk2ZxjAvb5yb5QNaRewCb6LrZscP4v8JA.jpg" width="400"/>
+     <div class="text-content">
+      <div class="age-badge">
+       Ages 11-16
+      </div>
+      <h2>
+       Head to Toe Cleansing
+      </h2>
+      <p>
+       Discover our clean specially formulated products
+      </p>
+      <button class="shop-button">
+       Shop Tikitoro
+      </button>
+      <div class="dotes">
+        <span data-slide="0">
+        </span>
+        <span data-slide="1">
+        </span>
+        <span data-slide="2">
+        </span>
+       </div>
+     </div>
+     <img alt="Image 4" height="400" src="https://storage.googleapis.com/a1aa/image/DzZ3RfqRL3wACSjQfyilOXDy2x4DEfhRv4OtJUfnF1w3BfLfE.jpg" width="400"/>
+    </div>
+    <div class="slide">
+     <img alt="Image 5" height="400" src="https://storage.googleapis.com/a1aa/image/0dxsWBPLAP4YN58P7cfToQNgrwGjROlzqprKXxRjt9gQ4v8JA.jpg" width="400"/>
+     <div class="text-content">
+      <div class="age-badge">
+       Ages 11-16
+      </div>
+      <h2>
+       Head to Toe Cleansing
+      </h2>
+      <p>
+       Discover our clean specially formulated products
+      </p>
+      <button class="shop-button">
+       Shop Tikitoro
+      </button>
+      <div class="dotes">
+        <span data-slide="0">
+        </span>
+        <span data-slide="1">
+        </span>
+        <span data-slide="2">
+        </span>
+       </div>
+     </div>
+     <img alt="Image 6" height="400" src="https://storage.googleapis.com/a1aa/image/2L5EplEdLlZsMxQoMjeJ5JD11mAucrM9naJAL5a3n9ebwfynA.jpg" width="400"/>
+    </div>
+   </div>
+   <button class="arrow-left">
+    <i class="fas fa-chevron-left">
+    </i>
+   </button>
+   <button class="arrow-right">
+    <i class="fas fa-chevron-right">
+    </i>
+   </button>
+  </div>
+ 
+  <script>
+   let currentIndex = 0;
+        const slidess = document.querySelector('.slidess');
+        const totalSlidess = document.querySelectorAll('.slide').length;
+        const dotes = document.querySelectorAll('.dotes span');
+
+        document.querySelector('.arrow-left').addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlidess - 1;
+            updateSlidePosition();
+        });
+
+        document.querySelector('.arrow-right').addEventListener('click', () => {
+            currentIndex = (currentIndex < totalSlidess - 1) ? currentIndex + 1 : 0;
+            updateSlidePosition();
+        });
+
+        dotes.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                currentIndex = parseInt(e.target.getAttribute('data-slide'));
+                updateSlidePosition();
+            });
+        });
+
+        function updateSlidePosition() {
+            slidess.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dotes.forEach(dot => dot.style.backgroundColor = '#d4a373');
+            dotes[currentIndex].style.backgroundColor = '#8b5e34';
+            animateText();
+        }
+
+        function animateText() {
+            const currentSlide = document.querySelectorAll('.slide')[currentIndex];
+            const textContent = currentSlide.querySelector('.text-content');
+            textContent.style.opacity = 0;
+            textContent.style.animation = 'none';
+            setTimeout(() => {
+                textContent.style.animation = 'fadeIn 1s ease-in-out forwards';
+            }, 50);
+        }
+
+        updateSlidePosition();
+  </script>
+    <div class="description text-muted mt-5 mb-5 ">
+        Safe personal care products created using unique formulations with nature<br/> derived and toxin free ingredients for kids and teenagers focusing on authentic,<br/> scientific and sustainable methods.
+       </div>
+       <div class="icons-container margin-top-10">
+        <div class="icon-item">
+         <img alt="Plant-based icon" height="50" src="https://storage.googleapis.com/a1aa/image/IH2VDKFyarrlAtV0k1NeIGFI6DiKZ912DRNJYD4LXD4gqw8JA.jpg" width="50"/>
+         <p>
+          Plant-based
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Gluten-free icon" height="50" src="https://storage.googleapis.com/a1aa/image/43ibZlGhkiZ8D51XVq65XhetZuXzfkE8LR3Z0fn45Zr9pCznA.jpg" width="50"/>
+         <p>
+          Gluten-free
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Non-GMO icon" height="50" src="https://storage.googleapis.com/a1aa/image/fuoGKEQgmX3f908mAW6fHJRiix1OGfECzoCzHfufbSgaPVYeJA.jpg" width="50"/>
+         <p>
+          Non-GMO
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Vegan icon" height="50" src="https://storage.googleapis.com/a1aa/image/iOqN3ycaUeQ0GqjvnfbokDGG2GjunmK62eM0ihROMHa5pCznA.jpg" width="50"/>
+         <p>
+          Vegan
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Cruelty-free icon" height="50" src="https://storage.googleapis.com/a1aa/image/KuW5XsVbZA6ZOFWLflW9PAPtFgpcl7C8nq6FVSxCyUahqw8JA.jpg" width="50"/>
+         <p>
+          Cruelty-free
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="pH balanced icon" height="50" src="https://storage.googleapis.com/a1aa/image/gKVlELEvFdKRIRJkdjC9hoSOODfEedX1cUzBiG7WPPe0pCznA.jpg" width="50"/>
+         <p>
+          pH balanced
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Dermatologically Tested icon" height="50" src="https://storage.googleapis.com/a1aa/image/ne5c04WCjdSKHaDotesBeavXNBhBZ4f4jAPNcKG6vojfvTFmPB.jpg" width="50"/>
+         <p>
+          Dermatologically Tested
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Sustainability Focused icon" height="50" src="https://storage.googleapis.com/a1aa/image/gOWvCyCvt7qfdq2CSHeyU32anH993mehchVf0VnBYtzDUFmPB.jpg" width="50"/>
+         <p>
+          Sustainability Focused
+         </p>
+        </div>
+       </div>
+        <div class="container">
+   <h1>
+    Shop Tikitoro
+   </h1>
+   <div class="product">
+    <div class="product-item">
+     <div class="product-item-content">
+      <h2>
+       tikitoro
+       <span style="color: #d2691e;">
+        kids
+       </span>
+      </h2>
+     </div>
+     <img alt="A mother and child in bathrobes, smiling at each other." height="321" src="https://storage.googleapis.com/a1aa/image/FbwXxXnceeverIzeS9Xn19XI6PyDQNLHtrywG7Qbi3MLtRmPB.jpg" width="556"/>
+     <div class="product-item-content">
+      <p>
+       Specially formulated for 4-10 year olds
+       <span class="arrow">
+        <i class="fas fa-arrow-right">
+        </i>
+       </span>
+      </p>
+     </div>
+    </div>
+    <div class="product-item">
+     <div class="product-item-content">
+      <h2>
+       tikitoro
+      </h2>
+     </div>
+     <img alt="A child in a bathtub filled with bubbles, enjoying a bath." height="321" src="https://storage.googleapis.com/a1aa/image/9ffEA8j3w8pYV0mkEdGdXMswfkCsP7toIaUqQ0BjPOjo2IznA.jpg" width="556"/>
+     <div class="product-item-content">
+      <p>
+       Specially formulated for 11-16 year olds
+       <span class="arrow">
+        <i class="fas fa-arrow-right">
+        </i>
+       </span>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+    <h1>
+     Shop Tikitoro
+    </h1>
+    <div class="product">
+     <div class="product-item">
+      <div class="product-item-content">
+       <h2>
+        tikitoro
+        <span style="color: #d2691e;">
+         kids
+        </span>
+       </h2>
+      </div>
+      <img alt="A mother and child in bathrobes, smiling at each other." height="321" src="https://storage.googleapis.com/a1aa/image/FbwXxXnceeverIzeS9Xn19XI6PyDQNLHtrywG7Qbi3MLtRmPB.jpg" width="556"/>
+      <div class="product-item-content">
+       <p>
+        Specially formulated for 4-10 year olds
+        <span class="arrow">
+         <i class="fas fa-arrow-right">
+         </i>
+        </span>
+       </p>
+      </div>
+     </div>
+     <div class="product-item">
+      <div class="product-item-content">
+       <h2>
+        tikitoro
+       </h2>
+      </div>
+      <img alt="A child in a bathtub filled with bubbles, enjoying a bath." height="321" src="https://storage.googleapis.com/a1aa/image/9ffEA8j3w8pYV0mkEdGdXMswfkCsP7toIaUqQ0BjPOjo2IznA.jpg" width="556"/>
+      <div class="product-item-content">
+       <p>
+        Specially formulated for 11-16 year olds
+        <span class="arrow">
+         <i class="fas fa-arrow-right">
+         </i>
+        </span>
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   class="description text-muted mt-5 mb-5 ">
+        Safe personal care products created using unique formulations with nature<br/> derived and toxin free ingredients for kids and teenagers focusing on authentic,<br/> scientific and sustainable methods.
+       </div>
+       <div class="icons-container margin-top-10">
+        <div class="icon-item">
+         <img alt="Plant-based icon" height="50" src="https://storage.googleapis.com/a1aa/image/IH2VDKFyarrlAtV0k1NeIGFI6DiKZ912DRNJYD4LXD4gqw8JA.jpg" width="50"/>
+         <p>
+          Plant-based
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Gluten-free icon" height="50" src="https://storage.googleapis.com/a1aa/image/43ibZlGhkiZ8D51XVq65XhetZuXzfkE8LR3Z0fn45Zr9pCznA.jpg" width="50"/>
+         <p>
+          Gluten-free
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Non-GMO icon" height="50" src="https://storage.googleapis.com/a1aa/image/fuoGKEQgmX3f908mAW6fHJRiix1OGfECzoCzHfufbSgaPVYeJA.jpg" width="50"/>
+         <p>
+          Non-GMO
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Vegan icon" height="50" src="https://storage.googleapis.com/a1aa/image/iOqN3ycaUeQ0GqjvnfbokDGG2GjunmK62eM0ihROMHa5pCznA.jpg" width="50"/>
+         <p>
+          Vegan
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Cruelty-free icon" height="50" src="https://storage.googleapis.com/a1aa/image/KuW5XsVbZA6ZOFWLflW9PAPtFgpcl7C8nq6FVSxCyUahqw8JA.jpg" width="50"/>
+         <p>
+          Cruelty-free
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="pH balanced icon" height="50" src="https://storage.googleapis.com/a1aa/image/gKVlELEvFdKRIRJkdjC9hoSOODfEedX1cUzBiG7WPPe0pCznA.jpg" width="50"/>
+         <p>
+          pH balanced
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Dermatologically Tested icon" height="50" src="https://storage.googleapis.com/a1aa/image/ne5c04WCjdSKHaDotesBeavXNBhBZ4f4jAPNcKG6vojfvTFmPB.jpg" width="50"/>
+         <p>
+          Dermatologically Tested
+         </p>
+        </div>
+        <div class="icon-item">
+         <img alt="Sustainability Focused icon" height="50" src="https://storage.googleapis.com/a1aa/image/gOWvCyCvt7qfdq2CSHeyU32anH993mehchVf0VnBYtzDUFmPB.jpg" width="50"/>
+         <p>
+          Sustainability Focused
+         </p>
+        </div>
+       </div>
+       <div class="container">
+        <div class="title">
+         Shop By Category
+        </div>
+        <div class="categories">
+         <div class="category">
+          <img alt="Person washing face" height="333" src="https://storage.googleapis.com/a1aa/image/sFld7O73UELWO9GOWl5W8H3Qsa8pN8ryNIIR8HjnN64bPZeJA.jpg" width="339"/>
+          <div class="label">
+           Face
+          </div>
+          <div class="arrow">
+           <i class="fas fa-arrow-right">
+           </i>
+          </div>
+         </div>
+         <div class="category">
+          <img alt="Person applying lotion on arm" height="333" src="https://storage.googleapis.com/a1aa/image/Qgihy2IidzKiHFoyV6ftzwdvkpyuP2cwBcDeAj25hwVu9k5TA.jpg" width="339"/>
+          <div class="label">
+           Body
+          </div>
+          <div class="arrow">
+           <i class="fas fa-arrow-right">
+           </i>
+          </div>
+         </div>
+         <div class="category">
+          <img alt="Person washing hair" height="333" src="https://storage.googleapis.com/a1aa/image/6v5uh2wS8qrgCZnOwg1r3azgpIxiirLXvClZgwOKTAbcPZeJA.jpg" width="339"/>
+          <div class="label">
+           Hair
+          </div>
+          <div class="arrow">
+           <i class="fas fa-arrow-right">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+       div class="container">
+   <h1 class="title">
+    Featured Products
+   </h1>
+   <div class="products">
+    <div class="product-card">
+     <span class="badge">
+      Teens
+     </span>
+     <i class="fas fa-heart">
+     </i>
+     <img alt="Tikitoro Teens Refreshing Face Wash (11 - 16 Years)" class="default-img" height="300" src="https://storage.googleapis.com/a1aa/image/zK29ROihzyYwEtnoefUZ0lYVKht9Be5QPlEWpFzktQfdwUmPB.jpg" width="300"/>
+     <img alt="Tikitoro Teens Refreshing Face Wash (11 - 16 Years) - Hover" class="hover-img" height="300" src="https://storage.googleapis.com/a1aa/image/hover1.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Tikitoro Teens Refreshing Face Wash (11 - 16 Years)
+      </h3>
+      <p class="price">
+       ₹ 300
+      </p>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <span class="badge">
+      Teens
+     </span>
+     <i class="fas fa-heart">
+     </i>
+     <img alt="Tikitoro Teens Conditioning Shampoo (11 - 16 Years)" class="default-img" height="300" src="https://storage.googleapis.com/a1aa/image/Hj2ZK3RSedQ8PKw8GwQ9wUEEqOy63eGCYMP3k4ErgpTFMl5TA.jpg" width="300"/>
+     <img alt="Tikitoro Teens Conditioning Shampoo (11 - 16 Years) - Hover" class="hover-img" height="300" src="https://storage.googleapis.com/a1aa/image/hover2.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Tikitoro Teens Conditioning Shampoo (11 - 16 Years)
+      </h3>
+      <p class="price">
+       ₹ 640
+      </p>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <span class="badge kids">
+      Kids
+     </span>
+     <i class="fas fa-heart">
+     </i>
+     <img alt="Tikitoro Kids Soothing Body Lotion (4-10 years)" class="default-img" height="300" src="https://storage.googleapis.com/a1aa/image/HCRsDiQ7wR56PtEjWjZ5YJ0swc3YW2lfJqgdb60tHthEmy8JA.jpg" width="300"/>
+     <img alt="Tikitoro Kids Soothing Body Lotion (4-10 years) - Hover" class="hover-img" height="300" src="https://storage.googleapis.com/a1aa/image/hover3.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Tikitoro Kids Soothing Body Lotion (4-10 years)
+      </h3>
+      <p class="price">
+       ₹ 650
+      </p>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+   </div>
+  </div> 
+  <div class="nine-slider-container">
+    <div class="nine-slider" id="nine-slider">
+        <div class="nine-slide" id="nine-slide1">Slide 1</div>
+        <div class="nine-slide" id="nine-slide2">Slide 2</div>
+        <div class="nine-slide" id="nine-slide3">Slide 3</div>
+        <div class="nine-slide" id="nine-slide4">Slide 4</div>
+        <div class="nine-slide" id="nine-slide5">Slide 5</div>
+        <div class="nine-slide" id="nine-slide6">Slide 6</div>
+    </div>
+    <button class="nine-prev" onclick="moveNineSlide(-1)">&#10094;</button>
+    <button class="nine-next" onclick="moveNineSlide(1)">&#10095;</button>
+
+    <!-- Dot Navigation -->
+    <div class="nine-nav-dots" id="nine-dots">
+        <!-- Dots will be added dynamically -->
+    </div>
+</div>
+
+<script>
+    let currentNineSlide = 0;
+    const slides = document.querySelectorAll('.nine-slide');
+    const totalSlides = slides.length;
+    const dotsContainer = document.getElementById('nine-dots');
+
+    // Create dot navigation dynamically
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('nine-dot');
+        dot.onclick = function() {
+            currentNineSlide = i;
+            updateSlider();
+        };
+        dotsContainer.appendChild(dot);
+    }
+
+    // Update the slider and the active dot
+    function updateSlider() {
+        document.querySelector('.nine-slider').style.transform = `translateX(-${currentNineSlide * 100}%)`;
+        const dots = document.querySelectorAll('.nine-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            if (index === currentNineSlide) {
+                dot.classList.add('active');
+            }
+        });
+    }
+
+    // Automatic slide change
+    function autoSlide() {
+        currentNineSlide = (currentNineSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    // Set interval for automatic change (3 seconds)
+    setInterval(autoSlide, 3000);
+
+    // Move slider using previous/next buttons
+    function moveNineSlide(direction) {
+        currentNineSlide += direction;
+        if (currentNineSlide < 0) {
+            currentNineSlide = totalSlides - 1;
+        }
+        if (currentNineSlide >= totalSlides) {
+            currentNineSlide = 0;
+        }
+        updateSlider();
+    }
+
+    // Initialize the first dot as active
+    updateSlider();
+</script>
+</div>
+<div class="stay-in-touch">
+ <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+ <div class="overlay">
+  <p>
+   Stay up-to-date on Tikitoro products, promotions and blogs.
+  </p>
+  <input placeholder="email@address.com" type="email"/>
+  <button>
+   <i class="fas fa-arrow-right">
+   </i>
+  </button>
+ </div>
+</div>
+<div class="footer">
+ <div class="footer-links">
+  <div>
+   <h3>
+    Shop All
+   </h3>
+   <a href="#">
+    Face
+   </a>
+   <a href="#">
+    Body
+   </a>
+   <a href="#">
+    Hair
+   </a>
+   <a href="#">
+    Merch
+   </a>
+  </div>
+  <div>
+   <h3>
+    Our Story
+   </h3>
+   <a href="#">
+    Blog
+   </a>
+   <a href="#">
+    Contact
+   </a>
+   <a href="#">
+    FAQs
+   </a>
+  </div>
+  <div>
+   <h3>
+    Privacy Policy
+   </h3>
+   <a href="#">
+    Terms of Use
+   </a>
+   <a href="#">
+    Shipping Policy
+   </a>
+   <a href="#">
+    Returns, Refund &amp; Cancellation
+   </a>
+   <a href="#">
+    Track Your Order
+   </a>
+  </div>
+ </div>
+ <div class="social-icons">
+  <a href="#">
+   <i class="fab fa-facebook-f">
+   </i>
+  </a>
+  <a href="#">
+   <i class="fab fa-twitter">
+   </i>
+  </a>
+  <a href="#">
+   <i class="fab fa-instagram">
+   </i>
+  </a>
+  <a href="#">
+   <i class="fab fa-linkedin-in">
+   </i>
+  </a>
+ </div>
+</div>
+
+ </body>
+</html>

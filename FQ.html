@@ -1,0 +1,561 @@
+<html>
+<head>
+    <title>FAQs - Tikitoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+    <style>
+        
+        body {
+          
+            background-color: #f8f5f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2em;
+            color: #a05e2b;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            font-size: 1em;
+            color: #333;
+        }
+        .faq-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+            color: #333;
+            cursor: pointer;
+        }
+        .faq-question i {
+            color: #a05e2b;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+            
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+  
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+         tikitoro
+        </div>
+        <div class="menu">
+         <a href="shop.html">
+          Shop
+         </a>
+         <a href="gift.html">
+          Gifting
+         </a>
+         <a href="review.html">
+          Reviews
+         </a>
+         <a href="story.html">
+          Our Story
+         </a>
+         <a href="#">
+          Ingredients
+         </a>
+         <a href="tiktoro.html">
+          Tikitribe
+         </a>
+         <a href="sub.html">
+          Subscription
+         </a>
+         <a href="#">
+          Rewards
+         </a>
+         <a href="blog.html">
+          Blog
+         </a>
+         <a href="FQ.html">
+          FAQs
+         </a>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-heart">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-shopping-bag">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-user">
+         </i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>tikitoro</h1>
+            <p>We cater to curious children. Questions? We've got you!</p>
+        </div>
+        <div class="contact-info">
+            <p>If any of your questions aren't mentioned below, please contact us ...</p>
+            <p>Contact info: +91 8943-182-182 / +91 9150-094-947</p>
+            <p>Monday to Friday (10 AM to 5 PM)</p>
+            <p>Email: <a href="mailto:care@tikitoro.com">care@tikitoro.com</a></p>
+        </div>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>1. As you are a new brand, how can I trust you?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>2. Are you an Indian company?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>3. What forms of payment does Tikitoro accept?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>4. Can I cancel or change my order?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>5. How do I edit my billing information?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>6. Is Tikitoro certified by doctors or any agency that certifies products for children?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>7. Are the products paraben-free? Sulphate free, silicon free, gluten free?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>8. Is Tikitoro cruelty free? / Does Tikitoro test on animals?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>9. I am a Vegan. Can I use your products?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>10. I am gluten-restricted. What products are appropriate for my use?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>11. Are Tikitoro products pH balanced?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>12. Could any of your products trigger allergies? Are your products allergen free?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>13. Do you use preservatives?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>14. What do you mean by 'actives'?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>15. What is plant sourced?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>16. Are your fragrances allergen free?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>17. Do your products contain artificial colors?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>18. Why are some of the ingredients chemical sounding?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>19. How do we achieve Plastic Neutrality?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>20. How do I determine the expiration date of a particular product?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>21. How can I find out what ingredients are in my product?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>22. Where's my order?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>23. How much does shipping cost?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>24. When will my order be processed?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>25. Can I edit my shipping address?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>26. What's your return, exchange & replacement policy? Wrong product(s) delivered / Missing product(s)</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>27. Where can I find my processing or past orders?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>28. How do I update personal information for my account?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>29. Can I store frequently used shipping addresses for quicker checkout?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>30. How do I redeem a gift card or account credit?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stay-in-touch">
+ <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+ <div class="overlay">
+  <p>
+   Stay up-to-date on Tikitoro products, promotions and blogs.
+  </p>
+  <input placeholder="email@address.com" type="email"/>
+  <button>
+   <i class="fas fa-arrow-right">
+   </i>
+  </button>
+ </div>
+</div>
+<div class="footer">
+ <div class="footer-links">
+  <div>
+   <h3>
+    Shop All
+   </h3>
+   <a href="#">
+    Face
+   </a>
+   <a href="#">
+    Body
+   </a>
+   <a href="#">
+    Hair
+   </a>
+   <a href="#">
+    Merch
+   </a>
+  </div>
+  <div>
+   <h3>
+    Our Story
+   </h3>
+   <a href="#">
+    Blog
+   </a>
+   <a href="#">
+    Contact
+   </a>
+   <a href="#">
+    FAQs
+   </a>
+  </div>
+  <div>
+   <h3>
+    Privacy Policy
+   </h3>
+   <a href="#">
+    Terms of Use
+   </a>
+   <a href="#">
+    Shipping Policy
+   </a>
+   <a href="#">
+    Returns, Refund &amp; Cancellation
+   </a>
+   <a href="#">
+    Track Your Order
+   </a>
+  </div>
+ </div>
+ <div class="social-icons">
+  <a href="#">
+   <i class="fab fa-facebook-f">
+   </i>
+  </a>
+  <a href="#">
+   <i class="fab fa-twitter">
+   </i>
+  </a>
+  <a href="#">
+   <i class="fab fa-instagram">
+   </i>
+  </a>
+  <a href="#">
+   <i class="fab fa-linkedin-in">
+   </i>
+  </a>
+ </div>
+</div>
+</body>
+</html>

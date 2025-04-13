@@ -1,0 +1,459 @@
+<html>
+ <head>
+  <title>
+   Tikitoro
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  
+  <style>
+   body {
+           
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero .content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero .content .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 16px;
+            color: #8c8c8c;
+            margin-bottom: 40px;
+        }
+        .section .steps {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .section .steps .step {
+            text-align: center;
+        }
+        .section .steps .step h3 {
+            font-size: 36px;
+            color: #8c5e3c;
+            margin: 0;
+        }
+        .section .steps .step p {
+            font-size: 14px;
+            color: #8c8c8c;
+        }
+        .section .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #8c5e3c;
+            margin: 40px 0;
+        }
+        .section .details {
+            font-size: 16px;
+            color: #8c8c8c;
+            margin-bottom: 40px;
+        }
+        .section .details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section .details ul li {
+            margin-bottom: 10px;
+        }
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #000;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        
+  </style>
+ </head>
+ <body>
+    <div class="navbar">
+        <div class="logo">
+         tikitoro
+        </div>
+        <div class="menu">
+         <a href="shop.html">
+          Shop
+         </a>
+         <a href="#">
+          Gifting
+         </a>
+         <a href="review.html">
+          Reviews
+         </a>
+         <a href="story.html">
+          Our Story
+         </a>
+         <a href="incre.html">
+          Ingredients
+         </a>
+         <a href="tiktoro.html">
+          Tikitribe
+         </a>
+         <a href="sub.html">
+          Subscription
+         </a>
+         <a href="reward.html">
+          Rewards
+         </a>
+         <a href="blog.html">
+          Blog
+         </a>
+         <a href="FQ.html">
+          FAQs
+         </a>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-heart">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-shopping-bag">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-user">
+         </i>
+        </div>
+    </div>
+  <div class="hero">
+   <img alt="Close-up of green seedlings growing in soil" height="600" src="https://storage.googleapis.com/a1aa/image/9UaB499ZOH4mHBe3bVXMeIcfTPOQiuZ6ravblGeN0e289RUfE.jpg" width="1920"/>
+   <div class="content">
+    <div class="icon">
+     <i class="fas fa-seedling">
+     </i>
+    </div>
+    <h1>
+     Organic
+    </h1>
+   </div>
+  </div>
+  <div class="section">
+   <h2>
+    Join Our Tikitribe!
+   </h2>
+   <p>
+    With More Ways To Unlock Exciting Perks, This Is Your All Access Pass To Exclusive Rewards.
+   </p>
+   <h2>
+    How It Works?
+   </h2>
+   <div class="steps">
+    <div class="step">
+     <h3>
+      01
+     </h3>
+     <p>
+      Earn Points
+     </p>
+     <p>
+      For every 1 Rupee spent, you earn one Tiki Coin
+     </p>
+    </div>
+    <div class="step">
+     <h3>
+      02
+     </h3>
+     <p>
+      Redeem Points
+     </p>
+     <p>
+      Turn your reward points into discounts by redeeming them during checkout
+     </p>
+    </div>
+   </div>
+   <div class="quote">
+    "Make Every Purchase Count"
+   </div>
+   <div class="details">
+    <p>
+     Earn rewards with every purchase and unlock exclusive perks - shopping just got more rewarding
+    </p>
+    <ul>
+     <li>
+      Add products to your cart, then proceed to checkout.
+     </li>
+     <li>
+      Login using your mobile number and input your shipping details.
+     </li>
+     <li>
+      Click 'Proceed to Pay' to continue.
+     </li>
+     <li>
+      Scroll down to the rewards section and select the number of coins you wish to redeem.
+     </li>
+     <li>
+      Choose your preferred payment method and finalize your purchase.
+     </li>
+    </ul>
+   </div>
+  </div>
+ 
+  <div class="stay-in-touch">
+    <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+    <div class="overlay">
+     <p>
+      Stay up-to-date on Tikitoro products, promotions and blogs.
+     </p>
+     <input placeholder="email@address.com" type="email"/>
+     <button>
+      <i class="fas fa-arrow-right">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="footer">
+    <div class="footer-links">
+     <div>
+      <h3>
+       Shop All
+      </h3>
+      <a href="#">
+       Face
+      </a>
+      <a href="#">
+       Body
+      </a>
+      <a href="#">
+       Hair
+      </a>
+      <a href="#">
+       Merch
+      </a>
+     </div>
+     <div>
+      <h3>
+       Our Story
+      </h3>
+      <a href="#">
+       Blog
+      </a>
+      <a href="#">
+       Contact
+      </a>
+      <a href="#">
+       FAQs
+      </a>
+     </div>
+     <div>
+      <h3>
+       Privacy Policy
+      </h3>
+      <a href="#">
+       Terms of Use
+      </a>
+      <a href="#">
+       Shipping Policy
+      </a>
+      <a href="#">
+       Returns, Refund &amp; Cancellation
+      </a>
+      <a href="#">
+       Track Your Order
+      </a>
+     </div>
+    </div>
+    <div class="social-icons">
+     <a href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+ 
+ </body>
+</html>

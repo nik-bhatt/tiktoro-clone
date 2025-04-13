@@ -1,0 +1,439 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   tikigro
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f5f0;
+            color: #333;
+        }
+      
+        .main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+        }
+        .section h2 {
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .section .text-left {
+            text-align: left;
+        }
+        .section .text-right {
+            text-align: right;
+        }
+        .section .image-left {
+            float: left;
+            margin-right: 20px;
+        }
+        .section .image-right {
+            float: right;
+            margin-left: 20px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        @media (max-width: 768px) {
+            .section .image-left, .section .image-right {
+                float: none;
+                margin: 0 0 20px;
+            }
+            .section .text-left, .section .text-right {
+                text-align: center;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #000;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+  
+  </style>
+ </head>
+ <body>
+    <div class="navbar">
+        <div class="logo">
+         tikitoro
+        </div>
+        <div class="menu">
+         <a href="shop.html">
+          Shop
+         </a>
+         <a href="gift.html">
+          Gifting
+         </a>
+         <a href="review.html">
+          Reviews
+         </a>
+         <a href="story.html">
+          Our Story
+         </a>
+         <a href="incre.html">
+          Ingredients
+         </a>
+         <a href="tiktoro.html">
+          Tikitribe
+         </a>
+         <a href="sub.html">
+          Subscription
+         </a>
+         <a href="reward.html">
+          Rewards
+         </a>
+         <a href="blog.html">
+          Blog
+         </a>
+         <a href="FQ.html">
+          FAQs
+         </a>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-heart">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-shopping-bag">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-user">
+         </i>
+        </div>
+    </div>
+  
+  <div class="main-content">
+   <div class="section">
+    <h2>
+     How It All Began
+    </h2>
+    <img alt="Two kids riding bicycles in a park" height="400" src="https://storage.googleapis.com/a1aa/image/N3J5HwhT8qqyPtbfiAG9AscfSLjmvFWs8qoKhPbrHVff9FqPB.jpg" width="800"/>
+    <p>
+     Our journey started with a simple idea: to create personal care products that are safe, effective, and fun for kids and teens. We believe in the power of nature and science to bring out the best in everyone.
+    </p>
+   </div>
+   <div class="section clearfix">
+    <img alt="A dollop of cream" class="image-left" height="400" src="https://storage.googleapis.com/a1aa/image/jwa4owsQXI5ZN5EJH3Tr1BEnArdNfIofmjsy3gyQwRQjfC1nA.jpg" width="400"/>
+    <div class="text-right">
+     <h2>
+      Born Out Of A Need
+     </h2>
+     <p>
+      We noticed a gap in the market for personal care products that cater specifically to the needs of kids and teens. Our products are designed to be gentle yet effective, using only the best ingredients.
+     </p>
+    </div>
+   </div>
+   <div class="section clearfix">
+    <img alt="Natural ingredients and a hand applying cream" class="image-right" height="400" src="https://storage.googleapis.com/a1aa/image/U3D3l1DH75YvExAdOPWU5xeG11AD9NFLRg0TpPRNw3PuvQ9JA.jpg" width="400"/>
+    <div class="text-left">
+     <h2>
+      Passing The Tests That Matter
+     </h2>
+     <p>
+      Our products undergo rigorous testing to ensure they meet the highest standards of safety and efficacy. We are committed to providing products that parents can trust and kids will love.
+     </p>
+    </div>
+   </div>
+   <div class="section">
+    <img alt="A child washing their face" height="400" src="https://storage.googleapis.com/a1aa/image/PFAYf26e23l0qEHW3CefPdKZPwRYoCU7WKgrnHhuOIsGeLUfE.jpg" width="800"/>
+    <h2>
+     We Believe In Giving Back
+    </h2>
+    <p>
+     We are dedicated to making a positive impact in our community. A portion of our profits goes towards supporting children's education and health initiatives.
+    </p>
+   </div>
+   <div class="section clearfix">
+    <img alt="A mother and child during bath time" class="image-left" height="400" src="https://storage.googleapis.com/a1aa/image/l5dUbJRAHzKZMtkdohI3fQbLz22KbiTrIc9jsQep4WWshh6TA.jpg" width="400"/>
+    <div class="text-right">
+     <h2>
+      Created With Love For Your Little Ones
+     </h2>
+     <p>
+      Our products are crafted with care and love, ensuring that they are not only effective but also enjoyable to use. We want to make personal care a fun and positive experience for kids and teens.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="stay-in-touch">
+    <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+    <div class="overlay">
+     <p>
+      Stay up-to-date on Tikitoro products, promotions and blogs.
+     </p>
+     <input placeholder="email@address.com" type="email"/>
+     <button>
+      <i class="fas fa-arrow-right">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="footer">
+    <div class="footer-links">
+     <div>
+      <h3>
+       Shop All
+      </h3>
+      <a href="#">
+       Face
+      </a>
+      <a href="#">
+       Body
+      </a>
+      <a href="#">
+       Hair
+      </a>
+      <a href="#">
+       Merch
+      </a>
+     </div>
+     <div>
+      <h3>
+       Our Story
+      </h3>
+      <a href="#">
+       Blog
+      </a>
+      <a href="#">
+       Contact
+      </a>
+      <a href="#">
+       FAQs
+      </a>
+     </div>
+     <div>
+      <h3>
+       Privacy Policy
+      </h3>
+      <a href="#">
+       Terms of Use
+      </a>
+      <a href="#">
+       Shipping Policy
+      </a>
+      <a href="#">
+       Returns, Refund &amp; Cancellation
+      </a>
+      <a href="#">
+       Track Your Order
+      </a>
+     </div>
+    </div>
+    <div class="social-icons">
+     <a href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div> 
+ </body>
+ 
+</html>

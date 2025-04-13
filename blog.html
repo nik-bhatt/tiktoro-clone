@@ -1,0 +1,737 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tikitoro
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ 
+  <style>
+   body {
+           
+            margin: 0;
+            padding: 0;
+            background-color: #f8f4ec;
+            color: #333;
+        }
+        header {
+            background-color: #f8f4ec;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header .logo img {
+            height: 40px;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+        }
+        header nav a:hover {
+            color: #a67c52;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+        }
+        .hero .hero-text h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-size: 1.8em;
+            color: #a67c52;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: calc(33.333% - 40px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .card details {
+            margin-top: 10px;
+        }
+        .card summary {
+            background-color: #a67c52;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            list-style: none;
+        }
+        .card summary:hover {
+            background-color: #8a5e3b;
+        }
+        .view-all {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .view-all a {
+            color: #a67c52;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .view-all a:hover {
+            text-decoration: underline;
+        }
+        .ingredients-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .ingredients-table th, .ingredients-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .ingredients-table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        .reviews h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+  </style>
+ </head>
+ <body>
+    <div class="navbar">
+        <div class="logo">
+         tikitoro
+        </div>
+        <div class="menu">
+         <a href="shop.html">
+          Shop
+         </a>
+         <a href="gift.html">
+          Gifting
+         </a>
+         <a href="review.html">
+          Reviews
+         </a>
+         <a href="story.html">
+          Our Story
+         </a>
+         <a href="incre.html">
+          Ingredients
+         </a>
+         <a href="tiktoro.html">
+          Tikitribe
+         </a>
+         <a href="sub.html">
+          Subscription
+         </a>
+         <a href="reward.html">
+          Rewards
+         </a>
+         <a href="blog.html">
+          Blog
+         </a>
+         <a href="FQ.html">
+          FAQs
+         </a>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-heart">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-shopping-bag">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-user">
+         </i>
+        </div>
+    </div>
+  <header>
+   <div class="container">
+    <div class="logo">
+     <img alt="Tikitoro logo" height="40" src="https://storage.googleapis.com/a1aa/image/moiOf3ZcWD31ekKerDaqITflrXEuXpU8frL97LoZ7XChJmQfE.jpg" width="150"/>
+    </div>
+   
+   </div>
+  </header>
+  <div class="hero">
+   <img alt="Curated, nature driven ingredients vetted for safety &amp; efficacy" height="400" src="https://storage.googleapis.com/a1aa/image/0PXwiaylgbKxA5Wez1f2zx9xIkUeLPefjOIwndOVcjesRMheJA.jpg" width="1200"/>
+   <div class="hero-text">
+    <h1>
+     Curated, nature driven ingredients vetted for safety &amp; efficacy
+    </h1>
+   </div>
+  </div>
+  <div class="content">
+   <h2 class="section-title">
+    What We Use
+   </h2>
+   <p>
+    We use nature and plant-derived ingredients, that are GMO-free. Our ingredient combinations are meticulously chosen to suit the special personal care needs of children and teenagers. We bring them the goodness of life and the best that Mother Nature has to offer.
+   </p>
+   <div class="cards">
+    <div class="card">
+     <img alt="Almond" height="50" src="https://storage.googleapis.com/a1aa/image/neajQ6FLMOQ7OybLmsOezBS2ZvXkNsKNfOfCIoclss0vEToPB.jpg" width="50"/>
+     <h3>
+      Almond
+     </h3>
+     <p>
+      Nourishes the skin
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Almond oil is rich in vitamins and minerals that nourish and moisturize the skin, making it soft and supple.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Aloe Vera" height="50" src="https://storage.googleapis.com/a1aa/image/RA4aG3UafLyegU5otcie9kjn8JfNn3XkpVNZChNtBtg6EToPB.jpg" width="50"/>
+     <h3>
+      Aloe Vera
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Aloe Vera is known for its soothing and healing properties. It helps in reducing skin irritation and inflammation.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Argan" height="50" src="https://storage.googleapis.com/a1aa/image/iXpbIjooFp72FFcKwqeo0s349Rfr9evv1nSe5AAEHoTCFToPB.jpg" width="50"/>
+     <h3>
+      Argan
+     </h3>
+     <p>
+      Argan oil is the holy grail of personal care
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Argan oil is rich in essential fatty acids and vitamin E, which help in moisturizing and nourishing the skin and hair.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Avocado" height="50" src="https://storage.googleapis.com/a1aa/image/uTefoAQoM3mkL0l9FkEgx1XJZDyOTcFDKdAMvrMzOKQTxE6TA.jpg" width="50"/>
+     <h3>
+      Avocado
+     </h3>
+     <p>
+      Moisturizes and nourishes the skin
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Avocado oil is rich in vitamins A, D, and E, which help in moisturizing and nourishing the skin, making it soft and smooth.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Black Pepper" height="50" src="https://storage.googleapis.com/a1aa/image/ze1fmUR1NBmKsU2yrfFqYWXVeCEMHpRAeEChENdtPSd6ImQfE.jpg" width="50"/>
+     <h3>
+      Black Pepper
+     </h3>
+     <p>
+      Improves blood circulation
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Black pepper is known for its stimulating properties that help in improving blood circulation and promoting healthy skin.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Black Seed" height="50" src="https://storage.googleapis.com/a1aa/image/7n90O1VKLYbtPR9X3y9Llmf0PyBMjTLtcYIBmJkj1nVqYC9JA.jpg" width="50"/>
+     <h3>
+      Black Seed
+     </h3>
+     <p>
+      Rich in antioxidants, promotes hair growth
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Black seed oil is rich in antioxidants and essential fatty acids that help in promoting hair growth and reducing hair loss.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Blueberry" height="50" src="https://storage.googleapis.com/a1aa/image/IOi82NRLWXbOFtCYpSHRylVzWzj1IOhM42k74aku5dDWMheJA.jpg" width="50"/>
+     <h3>
+      Blueberry
+     </h3>
+     <p>
+      Repairs skin damage
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Blueberries are rich in antioxidants that help in repairing skin damage and promoting healthy, glowing skin.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Bermuda Grass" height="50" src="https://storage.googleapis.com/a1aa/image/SSFZ4JajjSKZP5IyaoXfSeE507zBk00fZgegTpAOgnfWLmQfE.jpg" width="50"/>
+     <h3>
+      Bermuda Grass
+     </h3>
+     <p>
+      Soothes the scalp
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Bermuda grass is known for its soothing properties that help in reducing scalp irritation and promoting healthy hair.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Calendula" height="50" src="https://storage.googleapis.com/a1aa/image/u0y7JJpOowrDFN7Vpff1IbW7wcf4UPW6AkBqH6l57zCriJ0nA.jpg" width="50"/>
+     <h3>
+      Calendula
+     </h3>
+     <p>
+      Helps in healing &amp; soothing
+     </p>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Calendula is known for its healing and soothing properties that help in reducing skin irritation and promoting healthy skin.
+      </p>
+     </details>
+    </div>
+   </div>
+   <div class="view-all">
+    <a href="#">
+     &gt; View All
+    </a>
+   </div>
+   <h2 class="section-title">
+    What We Never Use
+   </h2>
+   <p>
+    We do not use any chemicals or additives that may interfere with hormonal systems and adversely affect the developmental changes in children.
+   </p>
+   <div class="cards">
+    <div class="card">
+     <img alt="Endocrine disruptors" height="50" src="https://storage.googleapis.com/a1aa/image/08PxEjzmVYaiH5F5SzRw9V2yQoSsuVjbBy0y4kEk5fTrYC9JA.jpg" width="50"/>
+     <h3>
+      Endocrine disruptors
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Endocrine disruptors are chemicals that can interfere with the endocrine (hormone) system, causing adverse health effects.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Chemical sunscreens" height="50" src="https://storage.googleapis.com/a1aa/image/x6UK81H7qoZCIRtQIqVGmif0ZlZKQxjufgWxCRadpMAJxE6TA.jpg" width="50"/>
+     <h3>
+      Chemical sunscreens
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Chemical sunscreens contain ingredients that can be absorbed into the skin and may cause hormonal disruptions.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Harsh chemicals" height="50" src="https://storage.googleapis.com/a1aa/image/p8lKEphw8BYkMhQT9icKQTL8bF5YUcEJGn0JFVQobgXUMheJA.jpg" width="50"/>
+     <h3>
+      Harsh chemicals
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Harsh chemicals can cause skin irritation, allergies, and other adverse health effects.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Fragrance &amp; allergens" height="50" src="https://storage.googleapis.com/a1aa/image/ODnZpGYE2eTMJibw6vf997S23TE1JiiveLdxCztaseepJmQfE.jpg" width="50"/>
+     <h3>
+      Fragrance &amp; allergens
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Fragrances and allergens can cause skin irritation, allergies, and other adverse health effects.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Formaldehyde releasers &amp; other harmful preservatives" height="50" src="https://storage.googleapis.com/a1aa/image/l5ReezzcpMoNnkG1oqHlemgq1RRRUuZMa9qpwyHwVLTViJ0nA.jpg" width="50"/>
+     <h3>
+      Formaldehyde releasers &amp; other harmful preservatives
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Formaldehyde releasers and other harmful preservatives can cause skin irritation, allergies, and other adverse health effects.
+      </p>
+     </details>
+    </div>
+    <div class="card">
+     <img alt="Petroleum Products" height="50" src="https://storage.googleapis.com/a1aa/image/iSBDR6sukFp4PdFsxVQekevrDPwXkQmC1tuXyPziXC7XxE6TA.jpg" width="50"/>
+     <h3>
+      Petroleum Products
+     </h3>
+     <details>
+      <summary>
+       Read More
+      </summary>
+      <p>
+       Petroleum products can cause skin irritation, allergies, and other adverse health effects.
+      </p>
+     </details>
+    </div>
+   </div>
+   <h2 class="section-title">
+    Ingredients Glossary
+   </h2>
+   <table class="ingredients-table">
+    <thead>
+     <tr>
+      <th>
+       INCI Name
+      </th>
+      <th>
+       Source
+      </th>
+      <th>
+       Derived from
+      </th>
+      <th>
+       Function
+      </th>
+    </div>
+    <div class="stay-in-touch">
+     <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+     <div class="overlay">
+      <p>
+       Stay up-to-date on Tikitoro products, promotions and blogs.
+      </p>
+      <input placeholder="email@address.com" type="email"/>
+      <button>
+       <i class="fas fa-arrow-right">
+       </i>
+      </button>
+     </div>
+    </div>
+    <div class="footer">
+     <div class="footer-links">
+      <div>
+       <h3>
+        Shop All
+       </h3>
+       <a href="#">
+        Face
+       </a>
+       <a href="#">
+        Body
+       </a>
+       <a href="#">
+        Hair
+       </a>
+       <a href="#">
+        Merch
+       </a>
+      </div>
+      <div>
+       <h3>
+        Our Story
+       </h3>
+       <a href="#">
+        Blog
+       </a>
+       <a href="#">
+        Contact
+       </a>
+       <a href="#">
+        FAQs
+       </a>
+      </div>
+      <div>
+       <h3>
+        Privacy Policy
+       </h3>
+       <a href="#">
+        Terms of Use
+       </a>
+       <a href="#">
+        Shipping Policy
+       </a>
+       <a href="#">
+        Returns, Refund &amp; Cancellation
+       </a>
+       <a href="#">
+        Track Your Order
+       </a>
+      </div>
+     </div>
+     <div class="social-icons">
+      <a href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+     </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
+    
+    

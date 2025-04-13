@@ -1,0 +1,646 @@
+
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tikitoro Subscription
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+       
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f5ed;
+            border-bottom: 1px solid #d4c4a8;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #a97c50;
+            font-family: 'Georgia', serif;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .navbar .icons i {
+            font-size: 18px;
+            color: #333;
+        }
+        .navbar .icons .badge {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            background-color: #a97c50;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+  
+        .hero h1 {
+            color: #6b4f4f;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero p {
+            color: #6b4f4f;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .hero button {
+            background-color: #d87d4a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: fadeIn 2s ease-in-out 2s;
+        }
+        .hero img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 50%;
+            margin-top: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero img:hover {
+            transform: scale(1.1);
+        }
+        .steps {
+            background-color: #f8f8f8;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .steps img {
+            width: 50px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .steps img:hover {
+            transform: scale(1.1);
+        }
+        .steps h2 {
+            color: #6b4f4f;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .steps p {
+            color: #6b4f4f;
+            font-size: 1em;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .steps .step {
+            display: inline-block;
+            width: 200px;
+            margin: 0 10px;
+        }
+        .why-subscribe {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .why-subscribe h2 {
+            color: #6b4f4f;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .why-subscribe p {
+            color: #6b4f4f;
+            font-size: 1em;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .why-subscribe .benefit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .why-subscribe .benefit img {
+            width: 50px;
+            margin-right: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .why-subscribe .benefit img:hover {
+            transform: scale(1.1);
+        }
+        .why-subscribe .benefit p {
+            flex: 1;
+            text-align: left;
+        }
+        .product-range {
+            background-color: #f8f8f8;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .product-range h2 {
+            color: #6b4f4f;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .product-range p {
+            color: #6b4f4f;
+            font-size: 1em;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .product-range .product {
+            display: inline-block;
+            width: 200px;
+            margin: 0 10px;
+            text-align: left;
+        }
+        .product-range .product img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-range .product img:hover {
+            transform: scale(1.1);
+        }
+        .product-range .product h3 {
+            color: #6b4f4f;
+            font-size: 1em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .product-range .product p {
+            color: #6b4f4f;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .product-range .product button {
+            background-color: #d87d4a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: fadeIn 2s ease-in-out 2s;
+        }
+        .stay-in-touch {
+            position: relative;
+            background-color: #f8f4f0;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stay-in-touch img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .stay-in-touch .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #000;
+        }
+        .stay-in-touch .overlay input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 70%;
+            max-width: 400px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .stay-in-touch .overlay button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: #5a3d2b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stay-in-touch .overlay button:hover {
+            background-color: #4a2f22;
+        }
+        .footer {
+            background-color: #d1b19b;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer .footer-links div {
+            margin: 10px;
+        }
+        .footer .footer-links a {
+            display: block;
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social-icons a:hover {
+            color: #5a3d2b;
+        }
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image, .product-details {
+                max-width: 100%;
+            }
+            .related-products .swiper-slide {
+                flex: 0 0 80%;
+                margin-bottom: 20px;
+            }
+            .stay-in-touch .overlay {
+                width: 90%;
+                flex-direction: column;
+            }
+            .stay-in-touch .overlay input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        
+
+</style>
+ <body>
+    <div class="navbar">
+        <div class="logo">
+         tikitoro
+        </div>
+        <div class="menu">
+         <a href="shop.html">
+          Shop
+         </a>
+         <a href="gift.html">
+          Gifting
+         </a>
+         <a href="review.html">
+          Reviews
+         </a>
+         <a href="shop.html">
+          Our Story
+         </a>
+         <a href="incre.html">
+          Ingredients
+         </a>
+         <a href="tiktoro.html">
+          Tikitribe
+         </a>
+         <a href="sub.html">
+          Subscription
+         </a>
+         <a href="reward.html">
+          Rewards
+         </a>
+         <a href="blog.html">
+          Blog
+         </a>
+         <a href="FQ.html">
+          FAQs
+         </a>
+        </div>
+        <div class="icons">
+         <i class="fas fa-search">
+         </i>
+         <i class="fas fa-heart">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-shopping-bag">
+          <span class="badge">
+           0
+          </span>
+         </i>
+         <i class="fas fa-user">
+         </i>
+        </div>
+    </div>
+  <section class="hero">
+   <h1>
+    Simplify Your Little One’s Skincare Routine with Tikitoro!
+   </h1>
+   <p>
+    Effortlessly schedule monthly skincare for kids and teens.
+   </p>
+   <button>
+    Subscribe Now
+   </button>
+   <img alt="Tikitoro skincare products for kids and teens" height="500" src="https://storage.googleapis.com/a1aa/image/Ot9KKHcjTrKNIFZttRsb6cQjeCT2D32xCCW93JWEQzkP2Q9JA.jpg" width="500"/>
+  </section>
+  <section class="steps">
+   <div class="step">
+    <img alt="Select your product icon" height="50" src="https://storage.googleapis.com/a1aa/image/JUnckprauM6HEloaRqODfUc6KUTaL7RnfXjRr3nTBNjTsh6TA.jpg" width="50"/>
+    <h2>
+     Select your product
+    </h2>
+    <p>
+     Add preferred delivery frequency
+    </p>
+   </div>
+   <div class="step">
+    <img alt="Select payment option icon" height="50" src="https://storage.googleapis.com/a1aa/image/nxUTgfVi53z6SK1yGfAjZDz8GheYjfHJkgvfkkXQ8sqGkNUfE.jpg" width="50"/>
+    <h2>
+     Select Payment option
+    </h2>
+    <p>
+     We deliver as planned
+    </p>
+   </div>
+  </section>
+  <section class="why-subscribe">
+   <h2>
+    Why subscribe?
+   </h2>
+   <p>
+    Discover the benefits of Tikitoro’s subscription plans made just for you.
+   </p>
+   <div class="benefit">
+    <img alt="Convenience icon" height="50" src="https://storage.googleapis.com/a1aa/image/wJkPCvaDofwf9EsFc3wcyuBa5PBVjm8MCpVoTFsh7zqWsh6TA.jpg" width="50"/>
+    <p>
+     Convenience: Enjoy regular deliveries of your favourite Tikitoro products without the hassle of reordering. Choose a delivery frequency that suits you, ensuring you never run out of essentials.
+    </p>
+   </div>
+   <div class="benefit">
+    <img alt="Savings icon" height="50" src="https://storage.googleapis.com/a1aa/image/9hdcESyCv85lAd2feV2PGfT6vaPxNuMfNGjSQ7xe2chvkNUfE.jpg" width="50"/>
+    <p>
+     Savings: Benefit from subscriber-only discounts and exclusive offers.
+    </p>
+   </div>
+   <div class="benefit">
+    <img alt="Total Flexibility icon" height="50" src="https://storage.googleapis.com/a1aa/image/C4vzZkfuwjWhUiRU1lDROMyvsGMHUjnpaJNEqaRFVjBP2Q9JA.jpg" width="50"/>
+    <p>
+     Total Flexibility: Easily adjust, skip, or cancel your subscription at any time.
+    </p>
+   </div>
+   <div class="benefit">
+    <img alt="Exciting Rewards icon" height="50" src="https://storage.googleapis.com/a1aa/image/wYzLdl6RDYLhBh6rjt6B5dV4I4RbjKjPO6Qe9eBSnKqRsh6TA.jpg" width="50"/>
+    <p>
+     Exciting Rewards: Earn Tiki Coins with every purchase and redeem them for discounts on future orders. Make every purchase count and unlock exclusive perks.
+    </p>
+   </div>
+   <div class="benefit">
+    <img alt="Reliability icon" height="50" src="https://storage.googleapis.com/a1aa/image/K6oI3IpglfSfukL89bgmdo8vVtQdRdjfN0c7fPTZe9D0kNUfE.jpg" width="50"/>
+    <p>
+     Reliability: Trust in Tikitoro’s consistent service and high-quality products, delivered to your doorstep on time.
+    </p>
+   </div>
+   <div class="benefit">
+    <img alt="Personalized Purchases icon" height="50" src="https://storage.googleapis.com/a1aa/image/WbnCfzMcbOzHUyitRTnRQEQBFckkDQbZKRITbIUWupdR2Q9JA.jpg" width="50"/>
+    <p>
+     Personalized Purchases: Tailor your subscription to include the specific products you love, ensuring your subscription box is perfect for you.
+    </p>
+   </div>
+  </section>
+  <section class="product-range">
+   <h2>
+    Kid’s Range
+   </h2>
+   <p>
+    The kids range from Tikitoro is designed with your child’s wellbeing in mind. Tikitoro’s kids products are made with naturally derived and safe ingredients and are intended to be gentle on delicate skin, providing peace of mind to parents.
+   </p>
+   <div class="product">
+    <img alt="Tikitoro Kids Nourishing Body Wash (4-10 years)" height="200" src="https://storage.googleapis.com/a1aa/image/XVuZCi5O3Hq5LxrNrXMtBFaApb7sUe0AtuESodnpcE3W2Q9JA.jpg" width="200"/>
+    <h3>
+     Tikitoro Kids Nourishing Body Wash (4-10 years)
+    </h3>
+    <p>
+     €40
+    </p>
+    <button>
+     Add to Cart
+    </button>
+   </div>
+   <div class="product">
+    <img alt="Tikitoro Kids Soothing Body Lotion (4-10 years)" height="200" src="https://storage.googleapis.com/a1aa/image/0svIseJfyFjoVEMGkx3PHbQug9le5VSOvnOBCIhggj2yYD1nA.jpg" width="200"/>
+    <h3>
+     Tikitoro Kids Soothing Body Lotion (4-10 years)
+    </h3>
+    <p>
+     €50
+    </p>
+    <button>
+     Add to Cart
+    </button>
+   </div>
+   <div class="product">
+    <img alt="Tikitoro Kids Mineral Sunscreen (4-10 years)" height="200" src="https://storage.googleapis.com/a1aa/image/BXuZBOT5QybyBlyPd8RzPAaTTlfNpeC3Xhq5DFfJXpb5YD1nA.jpg" width="200"/>
+    <h3>
+     Tikitoro Kids Mineral Sunscreen (4-10 years)
+    </h3>
+    <p>
+     €750
+    </p>
+    <button>
+     Add to Cart
+    </button>
+   </div>
+   <div class="product">
+    <img alt="Tikitoro Kids Nourishing Hair Oil (4-10 years)" height="200" src="https://storage.googleapis.com/a1aa/image/V2Ds2JEbkeXpZ6YkZhjD87h5UnXRiEKiCg5sSynRFTlV2Q9JA.jpg" width="200"/>
+    <h3>
+     Tikitoro Kids Nourishing Hair Oil (4-10 years)
+    </h3>
+    <p>
+     €450
+    </p>
+    <button>
+     Add to Cart
+    </button>
+   </div>
+  </section>
+  <section class="product-range">
+   <h2>
+    Teens Range
+   </h2>
+   <p>
+    The Tikitoro Teens range gets real about all things teens. Made with safe, naturally derived ingredients, it’s the perfect step up to skincare curated just for teens.
+   </p>
+   <div class="product">
+    <img alt="Tikitoro Teens Anti-dandruff Shampoo (11-16 years)" height="200" src="https://storage.googleapis.com/a1aa/image/CNoFuYdIi3rkLNpH0f64vQuiQUMKyTDY19lcfpQopkpssh6TA.jpg" width="200"/>
+    <h3>
+     Tikitoro Teens Anti-dandruff Shampoo (11-16 years)
+    </h3>
+    <p>
+     €790
+    </p>
+    <button>
+     Add to Cart
+    </button>
+   </div>
+   <div class="product">
+    <img alt="Tikitoro Teens Nourishing Body Wash (11-16 years)" height="200" src="https://storage.googleapis.com/a1aa/image/suYS6kNJQFLUM1e0O3MeeeonL5l3G3KBkoXK3od5Fn4rxGqPB.jpg" width="200"/>
+    <h3>
+     Tikitoro Teens Nourishing Body Wash (11-16 years)
+    </h3>
+    <p>
+     €640
+    </p>
+    <button>
+     Add to Cart
+    </button>
+   </div>
+   <div class="product">
+    <img alt="Tikitoro Teens Mineral Sunscreen (11-16 years)" height="200" src="https://storage.googleapis.com/a1aa/image/myiApBC52OqJFxzn2kaD0c5QH1fWU2Q6gVG6Ze1KPeARZD1nA.jpg" width="200"/>
+    <h3>
+     Tikitoro Teens Mineral Sunscreen (11-16 years)
+    </h3>
+    <p>
+     €750
+    </p>
+    <button>
+     Add to Cart
+    </button>
+    
+   </div>
+   <div class="stay-in-touch">
+    <img alt="Colorful abstract design banner" height="300" src="https://storage.googleapis.com/a1aa/image/r0a2HBB8eFUQTCniUCdbXhSDBZpWAX36jw9fYxnzTiPRf70nA.jpg" width="1200"/>
+    <div class="overlay">
+     <p>
+      Stay up-to-date on Tikitoro products, promotions and blogs.
+     </p>
+     <input placeholder="email@address.com" type="email"/>
+     <button>
+      <i class="fas fa-arrow-right">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="footer">
+    <div class="footer-links">
+     <div>
+      <h3>
+       Shop All
+      </h3>
+      <a href="#">
+       Face
+      </a>
+      <a href="#">
+       Body
+      </a>
+      <a href="#">
+       Hair
+      </a>
+      <a href="#">
+       Merch
+      </a>
+     </div>
+     <div>
+      <h3>
+       Our Story
+      </h3>
+      <a href="#">
+       Blog
+      </a>
+      <a href="#">
+       Contact
+      </a>
+      <a href="#">
+       FAQs
+      </a>
+     </div>
+     <div>
+      <h3>
+       Privacy Policy
+      </h3>
+      <a href="#">
+       Terms of Use
+      </a>
+      <a href="#">
+       Shipping Policy
+      </a>
+      <a href="#">
+       Returns, Refund &amp; Cancellation
+      </a>
+      <a href="#">
+       Track Your Order
+      </a>
+     </div>
+    </div>
+    <div class="social-icons">
+     <a href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+</body>
+
+    
